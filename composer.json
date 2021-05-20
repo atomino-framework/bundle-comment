@@ -1,0 +1,18 @@
+{
+    "name": "atomino/plugin-comment",
+    "authors": [
+        {
+            "name": "laborci",
+            "email": "gergely@laborci.hu"
+        }
+    ],
+    "require": {
+        "lcobucci/jwt": "^4.0"
+	},
+    "autoload": {
+        "psr-4": {
+            "Atomino\\Molecules\\Module\\Comment\\": "src/Module/",
+            "Atomino\\Molecules\\EntityPlugin\\Commentable\\": "src/EntityPlugin/"
+        }
+    }
+}
