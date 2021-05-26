@@ -1,4 +1,4 @@
-<?php namespace Atomino\Molecules\Module\Comment;
+<?php namespace Atomino\Bundle\Comment;
 
 /**
  * @property-read int $id

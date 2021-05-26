@@ -1,12 +1,12 @@
-<?php namespace Atomino\Molecules\EntityPlugin\Commentable;
+<?php namespace Atomino\Carbon\Plugins\Comment;
 
-use Atomino\Database\Finder\Comparison;
-use Atomino\Database\Finder\Filter;
-use Atomino\Molecules\Module\Authorizable\AuthorizableInterface;
-use Atomino\Molecules\Module\Comment\CommentConverter;
-use Atomino\Molecules\Module\Comment\CommenterInterface;
-use Atomino\Molecules\Module\Comment\CommentInterface;
-
+use Atomino\Carbon\Database\Finder\Comparison;
+use Atomino\Carbon\Database\Finder\Filter;
+use Atomino\Bundle\Authorize\AuthorizableInterface;
+use Atomino\Bundle\Comment\CommentConverter;
+use Atomino\Bundle\Comment\CommenterInterface;
+use Atomino\Bundle\Comment\CommentInterface;
+use Atomino\Bundle\Comment\CommentableInterface;
 
 trait CommentableTrait {
 
@@ -26,10 +26,6 @@ trait CommentableTrait {
 			$this->canModerateComment($user)
 		);
 	}
-
-//	public function getCommenter(): AuthorizableInterface|null { return (static::getCommentableDescriptor()->userEntity)::getAuthenticated(); }
-//	public function commenterHasRole(string $role): bool { return (bool)($this->getCommenter() ?? $this->getCommenter()->hasRole($role)); }
-
 
 	public function addComment(CommenterInterface|null $user, string $text, ?int $replyId = null, bool $asBot = false): bool {
 		if (!$this->canAddComment($user)) return false;

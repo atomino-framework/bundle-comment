@@ -1,8 +1,9 @@
-<?php namespace Atomino\Molecules\EntityPlugin\Commentable;
+<?php namespace Atomino\Carbon\Plugins\Comment;
 
-use Atomino\Entity\Generator\CodeWriter;
-use Atomino\Entity\Plugin\Plugin;
-use Atomino\Molecules\Modules\Comment\CommentInterface;
+use Atomino\Carbon\Generator\CodeWriter;
+use Atomino\Carbon\Plugin\Plugin;
+use Atomino\Bundle\Comment\CommentInterface;
+use Atomino\Bundle\Comment\CommentableInterface;
 
 /**
  * Class Commentable
@@ -24,7 +25,7 @@ class Commentable extends Plugin {
 
 	public function generate(\ReflectionClass $ENTITY, CodeWriter $codeWriter){
 		$codeWriter->addInterface(CommentableInterface::class);
-		$codeWriter->addAttribute("#[RequiredField( '" . $this->cacheField . "', \Atomino\Entity\Field\JsonField::class )]");
+		$codeWriter->addAttribute("#[RequiredField( '" . $this->cacheField . "', \Atomino\Carbon\Field\JsonField::class )]");
 	}
 
 	public function getTrait(): string|null{ return CommentableTrait::class; }

@@ -1,6 +1,6 @@
-<?php namespace Atomino\Molecules\Module\Comment;
+<?php namespace Atomino\Bundle\Comment;
 
-use Atomino\Entity\EntityInterface;
+use Atomino\Carbon\EntityInterface;
 
 /**
  * @property int $id

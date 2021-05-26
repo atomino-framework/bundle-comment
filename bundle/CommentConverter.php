@@ -1,7 +1,7 @@
-<?php namespace Atomino\Molecules\Module\Comment;
+<?php namespace Atomino\Bundle\Comment;
 
 
-use Atomino\Molecules\EntityPlugin\Commentable\CommentableInterface;
+use Atomino\Carbon\Plugins\Comment\CommentableInterface;
 
 class CommentConverter {
 

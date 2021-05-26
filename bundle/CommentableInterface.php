@@ -1,7 +1,4 @@
-<?php namespace Atomino\Molecules\EntityPlugin\Commentable;
-
-use Atomino\Molecules\Module\Comment\CommenterInterface;
-use Atomino\Molecules\Module\Comment\CommentInterface;
+<?php namespace Atomino\Bundle\Comment;
 
 interface CommentableInterface {
 
