@@ -1,14 +1,14 @@
 {
     "name": "atomino/bundle-comment",
+    "license": "MIT",
+
     "authors": [
         {
             "name": "laborci",
             "email": "gergely@laborci.hu"
         }
     ],
-    "require": {
-        "lcobucci/jwt": "^4.0"
-	},
+    "require": {},
     "autoload": {
         "psr-4": {
             "Atomino\\Bundle\\Comment\\": "bundle/",
